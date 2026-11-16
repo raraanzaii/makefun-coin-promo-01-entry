@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="85%">
+      <stop offset="0%" stop-color="#46268a"/>
+      <stop offset="55%" stop-color="#22104d"/>
+      <stop offset="100%" stop-color="#0c0620"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="55%" stop-color="#ffb52e"/>
+      <stop offset="100%" stop-color="#e07f00"/>
+    </linearGradient>
+    <linearGradient id="goldDeep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffc93c"/>
+      <stop offset="100%" stop-color="#d97e06"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd94d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffd94d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background: deep navy/purple rounded square -->
+  <rect x="0" y="0" width="512" height="512" rx="92" fill="url(#bg)"/>
+
+  <!-- glow behind the coin -->
+  <circle cx="256" cy="368" r="168" fill="url(#glow)"/>
+
+  <!-- the gold coin the gavel strikes -->
+  <circle cx="256" cy="372" r="102" fill="url(#gold)" stroke="#8a5a00" stroke-width="7"/>
+  <circle cx="256" cy="372" r="79" fill="none" stroke="#9c6703" stroke-width="9" opacity="0.65"/>
+  <circle cx="256" cy="372" r="79" fill="none" stroke="#ffec9e" stroke-width="3" opacity="0.8"/>
+
+  <!-- swing motion arcs -->
+  <path d="M 78 244 A 196 196 0 0 1 200 58" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" opacity="0.28"/>
+  <path d="M 116 238 A 146 146 0 0 1 214 100" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.16"/>
+
+  <!-- the gavel, angled mid-strike -->
+  <g transform="translate(-30 -26) rotate(-35 250 210)">
+    <!-- handle -->
+    <rect x="236" y="206" width="28" height="176" rx="14" fill="#cf8412" stroke="#6e4400" stroke-width="7"/>
+    <!-- handle end knob -->
+    <circle cx="250" cy="392" r="21" fill="url(#goldDeep)" stroke="#6e4400" stroke-width="7"/>
+    <!-- head end caps -->
+    <rect x="128" y="134" width="40" height="94" rx="13" fill="url(#goldDeep)" stroke="#6e4400" stroke-width="7"/>
+    <rect x="332" y="134" width="40" height="94" rx="13" fill="url(#goldDeep)" stroke="#6e4400" stroke-width="7"/>
+    <!-- head barrel -->
+    <rect x="158" y="150" width="184" height="62" rx="12" fill="url(#gold)" stroke="#6e4400" stroke-width="7"/>
+    <!-- center band where the handle meets the head -->
+    <rect x="229" y="143" width="42" height="76" rx="9" fill="#a86e08" stroke="#6e4400" stroke-width="6"/>
+  </g>
+
+  <!-- impact sparks at the strike point -->
+  <g stroke="#ffd94d" stroke-width="11" stroke-linecap="round">
+    <line x1="356" y1="292" x2="390" y2="256"/>
+    <line x1="376" y1="324" x2="414" y2="316"/>
+    <line x1="330" y1="262" x2="342" y2="224"/>
+  </g>
+  <circle cx="398" cy="228" r="8" fill="#fff3b0"/>
+  <circle cx="428" cy="352" r="6" fill="#ffd94d"/>
+</svg>
